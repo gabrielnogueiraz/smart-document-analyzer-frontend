@@ -1,0 +1,236 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// IBM Theme Variables
+:root {
+  --ibm-blue: #0F62FE;
+  --ibm-purple: #6929C4;
+  --ibm-gray-50: #F4F4F4;
+  --ibm-gray-100: #E0E0E0;
+  --ibm-gray-900: #161616;
+}
+
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+
+// Corrigir alinhamento de ícones em todos os elementos
+lucide-angular {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+// Corrigir alinhamento em elementos flex
+.flex {
+  &.items-center {
+    align-items: center;
+  }
+  
+  // Garantir que ícones e texto fiquem alinhados
+  lucide-angular {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// Corrigir alinhamento em botões com ícones
+button {
+  &.flex {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  // Garantir que ícones e texto fiquem alinhados em botões
+  lucide-angular {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+  font-weight: 300;
+  color: var(--ibm-gray-900);
+  background-color: var(--ibm-gray-50);
+}
+
+// Angular Material Theme Override
+.mat-mdc-theme {
+  --mdc-theme-primary: #0F62FE;
+  --mdc-theme-secondary: #6929C4;
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-background: #F4F4F4;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-on-secondary: #ffffff;
+  --mdc-theme-on-surface: #161616;
+  --mdc-theme-on-background: #161616;
+}
+
+// Custom Components
+.ibm-card {
+  @apply bg-white rounded-ibm shadow-ibm border border-ibm-gray-100;
+}
+
+.ibm-button-primary {
+  @apply bg-ibm-blue text-white px-4 py-2 rounded-ibm font-medium transition-all duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-ibm-blue focus:ring-opacity-50;
+  
+  // Corrigir alinhamento de ícones e texto
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  // Garantir que ícones e texto fiquem alinhados
+  svg, lucide-angular {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.ibm-button-secondary {
+  @apply bg-ibm-purple text-white px-4 py-2 rounded-ibm font-medium transition-all duration-200 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-ibm-purple focus:ring-opacity-50;
+  
+  // Corrigir alinhamento de ícones e texto
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  // Garantir que ícones e texto fiquem alinhados
+  svg, lucide-angular {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.ibm-input {
+  @apply w-full px-3 py-2 border border-ibm-gray-200 rounded-ibm focus:outline-none focus:ring-2 focus:ring-ibm-blue focus:border-transparent transition-all duration-200;
+  
+  // Corrigir alinhamento do texto com ícones
+  &.pl-10 {
+    padding-left: 2.5rem; // 40px
+  }
+  
+  &.pr-10 {
+    padding-right: 2.5rem; // 40px
+  }
+}
+
+// Corrigir posicionamento dos ícones nos inputs
+.relative {
+  .absolute {
+    &.inset-y-0 {
+      top: 0;
+      bottom: 0;
+    }
+    
+    &.left-0 {
+      left: 0;
+    }
+    
+    &.right-0 {
+      right: 0;
+    }
+    
+    // Garantir que o ícone fique centralizado verticalmente
+    &.flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.ibm-table {
+  @apply w-full border-collapse;
+  
+  th {
+    @apply bg-ibm-gray-100 text-ibm-gray-900 font-medium px-4 py-3 text-left border-b border-ibm-gray-200;
+  }
+  
+  td {
+    @apply px-4 py-3 border-b border-ibm-gray-100;
+  }
+  
+  tr:hover {
+    @apply bg-ibm-gray-50;
+  }
+}
+
+// Loading States
+.skeleton {
+  @apply animate-pulse bg-ibm-gray-200 rounded-ibm;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// Responsive Grid
+.ibm-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+// Typography
+.ibm-heading-1 {
+  @apply text-3xl font-light text-ibm-gray-900 mb-4;
+}
+
+.ibm-heading-2 {
+  @apply text-2xl font-light text-ibm-gray-900 mb-3;
+}
+
+.ibm-heading-3 {
+  @apply text-xl font-medium text-ibm-gray-900 mb-2;
+}
+
+.ibm-body {
+  @apply text-base font-light text-ibm-gray-900 leading-relaxed;
+}
+
+.ibm-caption {
+  @apply text-sm font-light text-ibm-gray-600;
+}
