@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist/smart-document-analyzer",
+  "framework": "angular",
+  "installCommand": "npm install",
+  "devCommand": "npm start"
+}
