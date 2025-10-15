@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.smart-document-analyzer.com'
+  apiUrl: 'https://api-smart-document-analyzer.up.railway.app'
 };
