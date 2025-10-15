@@ -2,11 +2,11 @@
 
 **Desenvolvido por Gabriel Nogueira** | [GitHub: gabrielnogueiraz](https://github.com/gabrielnogueiraz)
 
-Uma aplicação Angular enterprise-grade para análise de documentos com inteligência artificial, implementando o IBM Design System e seguindo as melhores práticas de desenvolvimento da IBM.
+Uma aplicação Angular enterprise-grade para análise de documentos com inteligência artificial, com interface inspirada no IBM Design System.
 
 ## 🏢 Sobre o Projeto
 
-O Smart Document Analyzer é uma solução completa de análise de documentos que utiliza inteligência artificial para extrair insights, identificar tópicos e fornecer análises detalhadas de documentos. A aplicação foi desenvolvida seguindo rigorosamente os padrões e diretrizes da IBM para aplicações enterprise.
+O Smart Document Analyzer é uma solução completa de análise de documentos que utiliza inteligência artificial para extrair insights, identificar tópicos e fornecer análises detalhadas de documentos. A aplicação possui interface inspirada no IBM Design System para uma experiência visual moderna e profissional.
 
 ## 🛠️ Stack Tecnológica
 
@@ -16,7 +16,7 @@ O Smart Document Analyzer é uma solução completa de análise de documentos qu
 - **Zone.js 0.14.0** - Change detection
 
 ### UI/UX & Design System
-- **IBM Design System** - Implementação completa do design system da IBM
+- **IBM Design System** - Interface inspirada no design system da IBM
 - **TailwindCSS 3.4.0** - Framework CSS utilitário
 - **Angular Material 18.0.0** - Componentes UI
 - **Lucide Angular 0.400.0** - Iconografia consistente
@@ -53,7 +53,7 @@ src/app/
 └── app.routes.ts         # Configuração de rotas
 ```
 
-### Padrões de Desenvolvimento IBM
+### Padrões de Desenvolvimento
 
 #### 1. **Separação de Responsabilidades**
 - Core: Lógica de negócio e serviços
@@ -75,7 +75,7 @@ src/app/
 - OnPush change detection
 - Bundle optimization
 
-## 🎨 IBM Design System Implementation
+## 🎨 Interface Inspirada no IBM Design System
 
 ### Paleta de Cores
 ```scss
@@ -264,7 +264,7 @@ API_URL=https://api.smart-document-analyzer.com
 
 ## 🤝 Contribuição
 
-### Padrões de Commit (IBM)
+### Padrões de Commit
 ```bash
 feat: nova funcionalidade
 fix: correção de bug
@@ -278,7 +278,7 @@ chore: tarefas de build
 ### Processo de Contribuição
 1. Fork do repositório
 2. Criação de branch feature (`git checkout -b feature/nova-funcionalidade`)
-3. Commit seguindo padrões IBM
+3. Commit seguindo padrões convencionais
 4. Push para branch (`git push origin feature/nova-funcionalidade`)
 5. Pull Request com descrição detalhada
 
@@ -305,6 +305,6 @@ npm run build:prod -- --verbose
 
 ---
 
-**Desenvolvido com ❤️ seguindo os padrões IBM Design System e Enterprise Development Practices**
+**Desenvolvido com ❤️ com interface inspirada no IBM Design System**
 
 **Autor**: Gabriel Nogueira | **GitHub**: [gabrielnogueiraz](https://github.com/gabrielnogueiraz)
